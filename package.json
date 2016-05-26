@@ -1,0 +1,22 @@
+{
+  "name": "tviewport",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "browserify -d index.js -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egauci/tviewport.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/egauci/tviewport/issues"
+  },
+  "homepage": "https://github.com/egauci/tviewport#readme",
+  "devDependencies": {
+    "browserify": "^13.0.1"
+  }
+}

@@ -6,32 +6,62 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Test viewport-event</title>
   <style>
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
     body {
       margin: 0;
       padding: 0;
       font-family: arial;
       color: #ccc;
+      width: 800px;
     }
     #overlay {
-      position: fixed;
+      position: absolute;
       padding: 10px;
       color: black;
-      top: 10px;
-      left: 10px;
+      background-color: white;
+      border-radius: 5px;
+      border: 1px solid gray;
+      height: 150px;
+      width: 250px;
+      overflow: hidden;
+    }
+    #topleft, #topright, #bottomleft, #bottomright {
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      border: 1px solid #e00;
+    }
+    #topleft {
+      border-right-width: 0;
+      border-bottom-width: 0;
+    }
+    #topright {
+      border-left-width: 0;
+      border-bottom-width: 0;
+    }
+    #bottomleft {
+      border-top-width: 0;
+      border-right-width: 0;
+    }
+    #bottomright {
+      border-top-width: 0;
+      border-left-width: 0;
     }
   </style>
 </head>
 <body>
   <div id="overlay"></div>
+  <div id="topleft"></div><div id="topright"></div><div id="bottomleft"></div><div id="bottomright"></div>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id augue varius, sagittis massa vitae, volutpat risus. Praesent sit amet est porttitor lorem ultrices imperdiet sit amet vel dolor. Vestibulum lectus mauris, blandit vitae pretium eu, ornare non est. Aenean lacinia massa vulputate, accumsan urna nec, vulputate dui. Nullam leo enim, ultricies eu faucibus nec, eleifend id lacus. Proin eu massa rhoncus, pulvinar nibh et, tempor eros. Phasellus gravida congue est ac pellentesque. Proin id ipsum tristique, aliquet dui in, posuere risus. Quisque a urna at libero imperdiet rhoncus. Mauris eget imperdiet orci. Maecenas eget ante at neque accumsan maximus tincidunt ut felis. Pellentesque posuere quam ac felis feugiat sodales. Fusce id laoreet lectus. Suspendisse at elit nisl. Mauris malesuada lectus eu est iaculis mattis.</p>
   <p>Suspendisse accumsan pharetra nisi nec suscipit. Suspendisse sodales consequat lorem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam commodo, nisl sed varius feugiat, ipsum tortor sollicitudin mi, eget semper eros eros a justo. Quisque elit sem, fringilla eget efficitur et, tristique sodales leo. Sed vitae accumsan nisi. Pellentesque sem mauris, scelerisque et gravida quis, malesuada ac risus. Aliquam blandit at turpis sit amet sagittis. Fusce nisl risus, ultrices vitae est vel, semper laoreet dui. Pellentesque mattis nibh tortor, non dapibus enim elementum quis. Vivamus ex turpis, condimentum eget sodales egestas, dapibus eget sem.</p>
   <p>In mattis ultrices metus, vel dictum lorem mattis vitae. Vivamus viverra, sem non ullamcorper eleifend, orci turpis lobortis velit, sed feugiat justo urna vitae nunc. In ultricies elementum purus, id blandit ipsum tincidunt lobortis. Sed rhoncus et enim eu vulputate. Sed nec faucibus neque. Pellentesque mattis, est et volutpat sagittis, metus odio finibus nulla, sed luctus neque urna non enim. Ut non ante imperdiet, gravida purus in, pellentesque enim. Aenean consectetur ipsum odio, sed placerat leo laoreet efficitur. Vivamus sit amet arcu vestibulum, porttitor quam vel, sodales leo. Suspendisse et diam sit amet metus rutrum fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   <p>Aenean imperdiet mollis lorem, quis tristique sem condimentum nec. Sed tristique mi massa, eget feugiat nisi pulvinar blandit. Integer aliquet non libero a sagittis. Morbi nisl massa, rhoncus non tortor ut, facilisis malesuada turpis. Morbi eget ultricies sapien. Vivamus at erat ac nibh elementum egestas venenatis a nisi. Etiam sit amet lobortis leo, et ultricies enim. Fusce consequat erat at rutrum hendrerit. Maecenas sit amet mi nisl. Sed tristique posuere lorem, sed pharetra felis. Nullam ultrices euismod purus, at rhoncus ante pharetra vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque vehicula purus vel egestas condimentum. Aliquam sodales placerat est a tempor. Integer non volutpat sem, in placerat elit. Sed sed interdum lorem.</p>
   <p>Aenean nunc turpis, elementum ut diam ut, sodales dapibus massa. Integer pulvinar scelerisque ipsum. Suspendisse nisi ex, euismod id pretium facilisis, condimentum quis risus. Praesent porta turpis at mauris euismod, eu placerat arcu scelerisque. Ut iaculis risus urna, in blandit quam laoreet quis. Nulla vulputate auctor metus, quis blandit lorem pharetra et. Nullam sit amet tincidunt est. Fusce porta orci ex, ut placerat sem blandit non. Vivamus velit orci, volutpat vitae faucibus ac, ultricies eu quam.</p>
-  <script src="../node_modules/systemjs/dist/system-polyfills.js"></script>
-  <script src="../node_modules/systemjs/dist/system.js"></script>
-  <script>
-    System.import('./index.js');
-  </script>
+  <script src="./bundle.js"></script>
 </body>
 </html>
