@@ -24,7 +24,6 @@ function show(vp) {
     'height:       ' + vp.height + '\n' +
     'clientWidth:  ' + vp.clientWidth + '\n' +
     'clientHeight: ' + vp.clientHeight + '\n' +
-    'top, left:    ' + top + ', ' + left + '\n' +
     '</pre>\n';
   ctr.innerHTML = html;
   topleft.style.top = String(vp.scrollY + 2) + 'px';
