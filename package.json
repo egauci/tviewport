@@ -1,9 +1,10 @@
 {
   "name": "tviewport",
   "version": "1.0.0",
-  "description": "",
+  "description": "Manual test page for viewport-event",
+  "private": true,
   "scripts": {
-    "build": "browserify -d index.js -o bundle.js"
+    "build": "browserify index.js -o bundle.js"
   },
   "repository": {
     "type": "git",

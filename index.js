@@ -17,6 +17,7 @@ function show(vp) {
   ctr.style.left = left;
   // console.log(top, left, offsetHeight, offsetWidth);
   var html = '<pre>\n' +
+    'isIOS:        ' + vp.isIOS + '\n' +
     'scrollY:      ' + vp.scrollY + '\n' +
     'scrollX:      ' + vp.scrollX + '\n' +
     'width:        ' + vp.width + '\n' +
