@@ -21,6 +21,6 @@
     "browserify": "^13.0.1"
   },
   "dependencies": {
-    "viewport-event": "^1.0.1"
+    "viewport-event": "^1.0.2"
   }
 }
