@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/egauci/tviewport#readme",
   "devDependencies": {
-    "browserify": "^13.0.1"
+    "browserify": "^13.1.0"
   },
   "dependencies": {
-    "viewport-event": "^1.0.2"
+    "viewport-event": "^1.0.3"
   }
 }
